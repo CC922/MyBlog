@@ -28,14 +28,14 @@
     {{ $showFooter := or $showDate $showReadingTime }}
     {{ if $showFooter }}
     <footer class="article-time">
-        {{ if $showDate }}
+        <!-- {{ if $showDate }}
             <div>
                 {{ partial "helper/icon" "date" }}
                 <time class="article-time--published">
                     {{- .Date.Format (or .Site.Params.dateFormat.published "Jan 02, 2006") -}}
                 </time>
             </div>
-        {{ end }}
+        {{ end }} -->
 
         {{ if $showReadingTime }}
             <div>
@@ -58,4 +58,53 @@
             </div>
         </footer>
     {{ end }}
+
+    {{ if or (not .Date.IsZero) (.Site.Params.article.readingTime) }}
+    <footer class="article-time">
+        {{ if not .Date.IsZero }}
+            <div>
+                {{ partial "helper/icon" "date" }}
+                <time class="article-time--published">
+                    {{- .Date.Format (or .Site.Params.dateFormat.published "Jan 02, 2006") -}}
+                </time>
+            </div>
+        {{ end }}
+
+        <!-- Created Date -->
+        <!-- {{- $pubdate := .PublishDate.Format "Jan 02, 2006" }} -->
+        <!-- Last Updated Date -->
+        <!-- {{- if .Lastmod }}
+            {{ partial "helper/icon" "date" }}
+            {{- $lastmod := .Lastmod.Format "Jan 02, 2006" }}
+                {{- if ne $lastmod $pubdate }}
+                    Updated:
+                    <time class="article-time--updated" datetime="{{ .Lastmod }}" title="{{ .Lastmod }}">
+                        {{ $lastmod }}
+                    </time>
+            {{- end }}
+        {{- end }} -->
+
+        {{ if .Site.Params.article.readingTime }}
+            <div>
+                {{ partial "helper/icon" "clock" }}
+                <time class="article-time--reading">
+                    {{ T "article.readingTime" .ReadingTime }}
+                </time>
+            </div>
+        {{ end }}
+    </footer>
+
+    <!-- {{- if ne .Lastmod .Date -}}
+    <footer class="article-lastmod">
+        <span>
+            {{ T "article.lastUpdatedOn" }} 
+            <div>
+                {{ partial "helper/icon" "clock" }}{{ .Lastmod.Format ( or .Site.Params.dateFormat.lastUpdated "Jan 02, 2006 15:04 MST" ) }}
+            </div>
+        </span>
+    </footer> -->
+    {{- end -}}
+{{ end }}
+
+
 </div>

@@ -22,7 +22,7 @@ article:
         other: 相关文章
 
     lastUpdatedOn:
-        other: Last updated on  
+        other: 本文最后更新于
 
     readingTime:
         other: "阅读时长: {{ .Count }} 分钟"
