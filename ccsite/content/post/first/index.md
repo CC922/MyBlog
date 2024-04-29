@@ -69,3 +69,5 @@ hugo new site /path/to/site
 这里需要感谢这个视频[600秒！带小白上手安装使用hugo-stack主题博客_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV15f4y157a6/?spm_id_from=333.1350.jump_directly)，让我最终把stack主题在github pages上呈现出来了。
 
 test
+
+test again
