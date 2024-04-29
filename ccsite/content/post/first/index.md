@@ -71,3 +71,5 @@ hugo new site /path/to/site
 test
 
 test again
+
+test again
