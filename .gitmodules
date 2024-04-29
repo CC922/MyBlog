@@ -1,0 +1,4 @@
+[submodule "ccsite/public"]
+	path = ccsite/public
+	url = https://github.com/CC922/CC922.github.io.git
+	branch = main
