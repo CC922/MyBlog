@@ -225,6 +225,12 @@ menu:
         #   params:
         #       icon: brand-twitter
 
+        - identifier: rss
+          name: RSS
+          url: "/index.xml"
+          params:
+              icon: rss
+
 related:
     includeNewer: true
     threshold: 60
@@ -260,3 +266,10 @@ enableGitInfo: true
 
 frontmatter: 
    lastmod = ["lastmod", ":git", "date", "publishDate"]
+
+   [menu]
+         [[menu.main]]
+            identifier = "rss"
+            name = "RSS"
+            url = "/index.xml"
+            weight = 5

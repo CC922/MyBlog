@@ -20,7 +20,7 @@ set hms=%time:~0,2%:%time:~3,2%:%time:~6,2%
 
 set dt=%ymd%%hms%
 ::输出
-git commit -m "%dt%"
+git commit -m "update %dt%"
 
 git push origin main
 
