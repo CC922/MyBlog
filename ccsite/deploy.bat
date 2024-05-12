@@ -23,7 +23,7 @@ set dt=%ymd%%hms%
 git commit -m "update %dt%"
 
 git push origin main
-
+https://search.google.com/search-console/verification-download?resource_id=https%3A%2F%2Fcc922.github.io%2F&at=AJDi_Mj9ZNC8dMcWaFzdYioMblmA%3A1714295540156
 ::  Action 3
 cd public
 git add  .
