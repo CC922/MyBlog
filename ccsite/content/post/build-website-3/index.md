@@ -28,3 +28,5 @@ categories:
 ```
 paginate = 10  # 首页每页显示的文章数
 ```
+
+test
