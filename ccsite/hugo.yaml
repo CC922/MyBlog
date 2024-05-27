@@ -75,6 +75,7 @@ params:
         math: true
         toc: true
         readingTime: false
+        wordCount: true
         license:
             enabled: true
             default: Licensed under CC BY-NC-SA 4.0
@@ -189,9 +190,9 @@ params:
 
     defaultImage:
         opengraph:
-            enabled: false
+            enabled: true
             local: false
-            src:
+            # src: img/win-path.jpg
 
     colorScheme:
         # Display toggle
@@ -252,17 +253,19 @@ markup:
         ordered: true
         startLevel: 2
     highlight:
-        # style: github
+        style: github
         noClasses: false
         codeFences: true
         guessSyntax: true
         lineNoStart: 1
-        lineNos: true
+        lineNos: false
         lineNumbersInTable: true
         tabWidth: 4
 
 
 enableGitInfo: true
+
+paginate: 10
 
 frontmatter: 
    lastmod = ["lastmod", ":git", "date", "publishDate"]

@@ -12,7 +12,6 @@ draft: false
 
 
 categories:
-
 - 开发工具
 
 ---
@@ -41,4 +40,4 @@ winget install Vim
 
 直接Win+S快捷键，在底下的搜索栏里输入系统变量，选择环境变量->系统变量->Path，点击编辑，将Vim.exe所在目录添加进去，保存。
 
-<img title="配置系统变量" src="win-path.jpg" alt="系统变量" data-align="center" width="375">
+![](win-path.jpg)
